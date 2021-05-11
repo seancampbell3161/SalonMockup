@@ -1,0 +1,367 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+h1 {
+  font-weight: 400;
+  font-family: "Poppins";
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+}
+
+ li, h1, a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  width: 8rem;
+  height: 2.5rem;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 6vh;
+  /* background: black; */
+  position: fixed;
+  z-index: 10;
+}
+
+nav li {
+  display: inline-block;
+  list-style: none;
+}
+
+nav a {
+  vertical-align: middle;
+  padding: 1.3rem 2rem;
+  border-radius: 5px;
+}
+
+nav {
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+nav li:first-child {
+  position: absolute;
+  left: 5%;
+}
+
+nav li:last-child {
+  position: absolute;
+  right: 10%;
+}
+
+.hero {
+  height: 120vh;
+  background-image: url("../images/hero-img.jpg");
+  background-size: cover;
+  background-position-x: right;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.hero-content {
+  width: 50%;
+  position: relative;
+  top: 20%;
+  left: 15%;
+  z-index: 1;
+}
+
+.hero-content h3 {
+  padding-bottom: 3rem;
+  font-size: 1rem;
+}
+
+
+
+.coupon {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* align-content: space-between; */
+  width: 18rem;
+  height: 16rem;
+  padding: 1rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+}
+
+.coupon p {
+  align-self: flex-end;
+}
+
+.features {
+  padding: 0 0;
+  height: 30vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about {
+  height: 55vh;
+  padding: 2rem 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgba(231, 219, 233, 0.6);
+}
+
+.about-text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  padding: 5rem;
+}
+
+.about-text * {
+  margin-bottom: 1rem;
+}
+
+
+
+.video {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.video img {
+  height: 85%;
+  padding-left: 2rem;
+}
+
+.stylists {
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4rem 2rem;
+}
+
+.stylist1 {
+  background-image: url("../images/julie.jpg");
+  background-position-y: bottom;
+}
+
+.stylist2 {
+  background-image: url("../images/jacques.jpg");
+  background-position-x: left;
+}
+
+.stylist3 {
+  background-image: url("../images/laura.jpg");
+}
+
+.stylist1, .stylist2, .stylist3 {
+  margin: 0 2rem;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.stylist1-content, .stylist2-content, .stylist3-content {
+  width: 70%;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 1rem;
+  bottom: -90%;
+  left: 14%;
+  box-shadow: 2px 5px 5px grey;
+}
+
+.offer {
+  height: 35vh;
+  padding: 2% 20%;
+  background:rgba(231, 219, 233, 0.6);
+}
+
+.offer * {
+  padding: 1rem 0;
+}
+
+.offer .booking-btn {
+  margin-top: 1rem;
+}
+
+.lookbook {
+  height: 140vh;
+  text-align: center;
+  padding: 5rem 20%;
+}
+
+
+/* .collage img {
+  width: 100%;
+  object-fit: cover;
+} */
+
+.collage {
+  overflow: hidden;
+  height: 50rem;
+}
+
+.column {
+  overflow: hidden;
+  float: left;
+  width: 33.33%;
+  padding: .5rem;
+}
+
+.photo{
+  width: 100%;
+  object-fit: cover;
+  padding: .5rem 0;
+}
+.photo.small {
+  height: 15rem;
+}
+.photo.large {
+  height: 35rem;
+}
+
+/* .large {
+  grid-row-end: span 2;
+}
+
+.small {
+  height: 100px;
+} */
+
+/* .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+} */
+
+/* .top {
+  height: 20rem;
+}
+
+.bottom {
+  height: 20rem;
+} */
+
+/* .large {
+  height: 500px;
+  flex: 2;
+} */
+
+footer {
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+nav a:hover {
+  background: rgba(0,0,0, 0.5);
+  transition-duration: 0.8s;
+}
+
+.coupon {
+  background: rgba(0,0,0,0.19);
+}
+
+.coupon h2 {
+  font-size: 2.5rem;
+}
+
+.hero h2, .hero h3, .hero span, .hero p {
+  color: white;
+}
+
+button {
+  background: white;
+  color: black;
+  border-radius: 5px;
+}
+
+button:hover {
+  /* background: black;
+  color: white;
+  transition-duration: 0.4s */
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.5s
+}
+
+.reverse-button {
+  width: 9rem;
+  background: rgba(0,0,0, 0.6);
+  color: white;
+}
+
+.reverse-button:hover {
+  background: white;
+  color: black;
+  transition-duration: 0.4s
+}
+
+.booking-btn {
+  width: 12rem;
+  height: 3rem;
+  background: rgb(211,211,211);
+}
+
+footer {
+  box-shadow: 1px 0 9px rgba(0,0,0,.2);
+}
