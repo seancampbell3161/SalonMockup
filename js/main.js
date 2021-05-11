@@ -1,33 +1,15 @@
-let list = document.querySelectorAll("a");
-    let header = document.getElementById('nav-bar');
-    let sandwich = document.querySelector('#menu-sandwich i');
-
-    window.onscroll = function() {scrollFunction()};
-
-
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            header.classList.add('nav-animation');
-            console.log('change');
-            
-            sandwich.classList.add('black-sandwich');
-
-            list.forEach((li)=>{
-              li.style.color = 'black'
-            })
-
-  
-
-        } else {
-
-
-            header.classList.remove('nav-animation');
-            
-            sandwich.classList.remove('black-sandwich');
-
-            list.forEach((li)=>{
-             li.style.color = 'white'
-            })
-        }
-      }
+$(document).ready(function() {
+  let scroll_pos = 0;
+  $(document).scroll(function() {
+    scroll_pos = $(this).scrollTop();
+    if(scroll_pos > 100) {
+      $("nav").css('background-color', 'white');
+      $("nav a").css('color', 'black');
+      $("nav p").css('color', 'black');
+    } else {
+      $("nav").css('background', 'none');
+      $("nav a").css('color', 'white');
+      $("nav p").css('color', 'white');
+    }
+  })
+});

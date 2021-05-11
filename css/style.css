@@ -29,7 +29,7 @@ body {
 
 h1 {
   font-weight: 400;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 5rem;
   letter-spacing: 0.2rem;
 }
@@ -53,7 +53,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  height: 6vh;
+  height: 6.8vh;
   /* background: black; */
   position: fixed;
   z-index: 10;
@@ -66,12 +66,12 @@ nav li {
 
 nav a {
   vertical-align: middle;
-  padding: 1.3rem 2rem;
+  padding: 1.1rem 2rem 1.05rem 2rem;
   border-radius: 5px;
 }
 
 nav {
-  height: 6vh;
+  height: 6.8vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -316,6 +316,14 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+a, p, span, h2, h3, button {
+  font-family: "Poppins", sans-serif;
+}
+
+/* nav a:last-child {
+  padding: 1.1rem
+} */
 
 nav a:hover {
   background: rgba(0,0,0, 0.5);
